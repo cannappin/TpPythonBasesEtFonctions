@@ -4,7 +4,7 @@ from datetime import date
 nom = str(input("Entrez le nom de la personne\n"))
 prenom = str(input("Entrez le prénom de la personne\n"))
 annee = int(input("Entrez l'année de naissance de la personne\n"))
-
+nombre = int(input("Nombre d'inscrivants ?")
 
 a = Mail(nom, prenom) 
 b = Categorie((2022-annee))
