@@ -7,7 +7,6 @@ annee = int(input("Entrez l'année de naissance de la personne\n"))
 
 
 a = Mail(nom, prenom) 
-b = Categorie((2022-annee))
+b = Cat((date.today().year - annee))
 
 print(f"Nom: {nom}\nPrénom: {prenom}\nMail: {a}\nCatégorie: {b}\n")
-# print(date.today())
