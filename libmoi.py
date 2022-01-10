@@ -4,7 +4,7 @@ def Mail(nom , prenom) :
     return prenom[0].upper() + "." + nom.lower() +"@baton-rouge.fr"
 
 
-def categorie(annee):
+def Categorie(annee):
     if annee < 6 and annee > 40 :
         return "Non Admis"
     elif annee < 12 :
