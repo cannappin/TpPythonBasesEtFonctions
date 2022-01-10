@@ -10,3 +10,4 @@ a = Mail(nom, prenom)
 b = Categorie((2022-annee))
 
 print(f"Nom: {nom}\nPrénom: {prenom}\nMail: {a}\nCatégorie: {b}\n")
+# print(date.today())

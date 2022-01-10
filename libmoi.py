@@ -4,16 +4,16 @@ def Mail(nom , prenom) :
     return prenom[0].upper() + "." + nom.lower() +"@baton-rouge.fr"
 
 
-def Categorie(annee):
-    if annee < 6 and annee > 40 :
+def Categorie(age):
+    if age < 6 or age > 40 :
         return "Non Admis"
-    elif annee < 12 :
+    elif age < 12 :
         return "Poussin"
-    elif annee < 18 :
+    elif age < 18 :
         return "Cadet"
-    elif annee < 24 :
+    elif age < 24 :
         return "Junior"
-    elif annee < 30 :
+    elif age < 30 :
         return "Semi-Pro"
-    elif annee <= 40 :
+    elif age <= 40 :
         return "Pro"
