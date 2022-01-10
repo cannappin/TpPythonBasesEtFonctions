@@ -1,7 +1,8 @@
-
+from datetime import date
 
 def Mail(nom , prenom) :
     return prenom[0].upper() + "." + nom.lower() +"@baton-rouge.fr"
+
 
 
 
@@ -12,3 +13,25 @@ def Cat(age):
     for i in dico:
         if age < dico[i]:
             return i 
+
+def Inscription():
+        nom = input("Entrez le nom de la personne\n")
+        prenom = input("Entrez le prénom de la personne\n")
+        while True:
+            try:
+                annee = int(input("Entrez l'année de naissance de la personne\n"))
+
+            except ValueError:
+                print("-----Entrer un nombre entier svp !-------")
+
+            else:
+                break         
+
+            # if len(str(annee)) != 4 :
+            #     print("L'année n'est pas correct")        
+            
+        a = Mail(nom, prenom) 
+        b = Cat((date.today().year - annee))
+
+        print(f"Nom: {nom}\nPrénom: {prenom}\nMail: {a}\nCatégorie: {b}\n")
+
