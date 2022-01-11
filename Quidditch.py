@@ -6,7 +6,6 @@ while not ok:
     nombre = input("Combien de personne voulez-vous inscrire ?\n(Si vous ne savez appuyer sur 'k')\n")
     try :
         int(nombre)
-
     except :  
         if nombre == 'k' :
             ok = True    

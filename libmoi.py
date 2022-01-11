@@ -19,16 +19,25 @@ def Inscription():
         prenom = input("Entrez le prénom de la personne\n")
         while True:
             try:
-                annee = int(input("Entrez l'année de naissance de la personne\n"))
-
+                annee = int(input("Entrez l'année de naissance de la personne\n")) 
+                while True :
+                    try:
+                        len(str(annee)) != 4
+                    except:  
+                        print("L'année n'est pas correct")        
+                    else:
+                        break          
+                    
             except ValueError:
-                print("-----Entrer un nombre entier svp !-------")
+                print("-----Entrer un nombre entier svp !-------")               
 
             else:
-                break         
-
-            # if len(str(annee)) != 4 :
-            #     print("L'année n'est pas correct")        
+                break     
+            
+       
+        
+                 
+                      
             
         a = Mail(nom, prenom) 
         b = Cat((date.today().year - annee))
