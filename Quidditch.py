@@ -1,5 +1,6 @@
 from libmoi import *
 from datetime import date
+import csv
 
 ok = False
 while not ok:
@@ -17,14 +18,32 @@ if nombre == "k":
     while continuer :
         Inscription()
         # nom = input("Entrez le nom de la personne\n")
+        # if not nom.isalpha() :
+        #     # or not re.search("[-]", nom)
+        #     print("---caractères spéciaux non autorisés----")
+        #     nom = input("Entrez le nom de la personne\n")
+            
         # prenom = input("Entrez le prénom de la personne\n")
+        # while not prenom.isalpha() :
+        #     # or not re.search("[-]", prenom)
+        #     print("---caractères spéciaux non autorisés----")
+        #     prenom = input("Entrez le prénom de la personne\n")
+            
         # while True:
         #     try:
-        #         annee = int(input("Entrez l'année de naissance de la personne\n"))
+        #         annee = int(input("Entrez l'année de naissance de la personne\n"))                       
+                    
         #     except ValueError:
-        #         print("-----Entrer un nombre entier svp !-------")
+        #         print("-----Entrer un nombre entier svp !-------")               
+
         #     else:
-        #         break                 
+        #         break    
+        # while True:                 
+        #     if len(str(annee)) !=4 :
+        #         print("--------l'année n'est pas valide !-------")
+        #         annee = int(input("Entrez l'année de naissance de la personne\n"))
+        #     else:
+        #         break                  
             
         # a = Mail(nom, prenom) 
         # b = Cat((date.today().year - annee))
@@ -39,3 +58,5 @@ if nombre == "k":
 else :
     for i in range(int(nombre)):
         Inscription()
+        
+        
