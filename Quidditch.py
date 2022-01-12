@@ -39,3 +39,4 @@ if nombre == "k":
 else :
     for i in range(int(nombre)):
         Inscription()
+    
