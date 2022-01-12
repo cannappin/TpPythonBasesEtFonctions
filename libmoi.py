@@ -53,4 +53,24 @@ def Inscription():
 
     print(f"Nom: {nom}\nPrénom: {prenom}\nMail: {mail}\nCatégorie: {cat}\n")
 
+    champs =['Nom', 'Prénom', 'Mail', 'Catégorie']
+
+    erengistrement = [nom, prenom, mail, cat ]
     
+    filename = "inscrits-" + str(date.today()) + ".csv"
+    
+    # if le fichier n'exister pas il faut le creer.
+    repertoire = os.listdir()
+    #  tester si dans cette liste (repertoire) il y'a filename
+    if not  filename in repertoire:
+        
+        csvfile = open(filename,'w')
+        csvwriter = csv.writer(csvfile, delimiter =";")
+        
+        csvwriter.writerow(champs)
+        csvfile.close()
+                
+    with open(filename, 'a', newline='') as csvfile :
+        csvwriter = csv.writer(csvfile, delimiter =";")           
+        
+        csvwriter.writerow(erengistrement)
