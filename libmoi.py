@@ -19,18 +19,19 @@ def Cat(age):
 
 def Inscription():
     
-    rex = re.compile("[a-zA-Z]*-[a-zA-Z]*")
+    rex = re.compile("[a-zA-Z]*[-]?[a-zA-Z]*")
     
     nom = input("Entrez le nom de la personne\n")        
-    while not rex.fullmatch(nom):            
+    while not rex.fullmatch(nom):
         print("---caractères spéciaux non autorisés----")
         nom = input("Entrez le nom de la personne\n")
         
-    prenom = input("Entrez le prénom de la personne\n")
-    
+        
+    prenom = input("Entrez le prénom de la personne\n")    
     while not rex.fullmatch(prenom):
         print("---caractères spéciaux non autorisés----")
         prenom = input("Entrez le prénom de la personne\n")
+        
         
     while True:
         try:
