@@ -15,7 +15,15 @@ from datetime import date
 
 # lire le repertoire puis copier les informations de chaque fichier csv dans un nouveau fichier csv et verifier qu'il est pqs de doublon 
 fin  = ".csv"
-repertoire = os.listdir()
+total =[]
+repertoire = listdir()
 for i in repertoire:
-    if i.endswith(fin):
-        print(i)
+    if i.endswith('.csv'):
+        with open(total[i], 'r') as csv_file:
+                csv_reader = csv.reader(csv_file)
+
+                with open ('inscrits_total.csv') as new_file:
+                    csv_writer = csv.writer(new_file,delimiter =';')
+
+                    for line in csv.reader:
+                        csv.writer.writerow(line)
