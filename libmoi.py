@@ -74,3 +74,16 @@ def Inscription():
         csvwriter = csv.writer(csvfile, delimiter =";")           
         
         csvwriter.writerow(erengistrement)
+
+def Inscrit_total():        
+    repertoire = os.listdir()        
+    for filename in repertoire:
+        if filename.endswith('.csv'):
+            with open(filename, 'r') as csv_file:
+                    csv_reader = csv.reader(csv_file)
+
+                    with open ('inscrits_total.csv','w') as new_file:
+                        csv_writer = csv.writer(new_file,delimiter =';')
+
+                        for line in csv_reader:
+                            csv_writer.writerow(line)

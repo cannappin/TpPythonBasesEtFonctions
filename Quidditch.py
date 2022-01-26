@@ -1,6 +1,7 @@
 from libmoi import *
 from datetime import date
 
+
 ok = False
 while not ok:
     nombre = input("Combien de personne voulez-vous inscrire ?\n(Si vous ne savez appuyer sur 'k')\n")
@@ -39,4 +40,6 @@ if nombre == "k":
 else :
     for i in range(int(nombre)):
         Inscription()
+        
+Inscrit_total()
     
